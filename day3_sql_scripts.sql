@@ -15,3 +15,6 @@ select max(listprice) from product;
 select count(listprice) from product
   where listprice = 57.50;
 
+select ProductID, code, Description, ListPrice 
+  from product pdt;
+
