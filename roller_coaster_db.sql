@@ -8,7 +8,7 @@ CREATE TABLE RollerCoaster (
   ID               INT             PRIMARY KEY     AUTO_INCREMENT,
   Roller_Coaster   VARCHAR(200)    NOT NULL,
   Speed_MPH        INT(4)          NOT NULL,
-  SpeedRank        INT(2)          NOT NULL        unique
+  SpeedRank        INT(2)          NOT NULL        
 );
 
 -- insert some rows into the RollerCoaster table
@@ -24,7 +24,7 @@ CREATE TABLE Location (
   City          VARCHAR(20)   NOT NULL,
   State         VARCHAR(2)    NOT NULL, 
   SpeedRank     INT(2)        NOT NULL,       
-  Foreign Key   (SpeedRank)   references RollerCoaster(SpeedRank)
+  Foreign Key   (ID)   references RollerCoaster(ID)
 );
 
 -- insert some rows into the Location table
