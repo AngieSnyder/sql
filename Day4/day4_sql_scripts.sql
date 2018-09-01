@@ -43,3 +43,6 @@ update accounts
 	set fees = 0
 	where ID = 1;
     
+delete from accounts
+	where ID = 51;
+    
