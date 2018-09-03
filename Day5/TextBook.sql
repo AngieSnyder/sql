@@ -17,18 +17,34 @@ INSERT INTO Product VALUES
 (3, 'Calculus 3', '185.00');
 
 -- create the TextBook Buyer table
-CREATE TABLE Buyer (
+CREATE TABLE BuyerInformation (
   ID           INT           PRIMARY KEY     AUTO_INCREMENT,
-  TextbookID   INT			  NOT NULL,
+  Textbook     VARCHAR(100)	 NOT NULL,
   Buyer        VARCHAR(50)   NOT NULL, 
-  Foreign Key  (TextbookID) references Product(ID)
+  ProductID	   INT			 NOT NULL,	
+  Foreign Key (ProductID) references Product (ID)
 );
 
 -- insert some rows into the Buyer table
-INSERT INTO Buyer VALUES
-(1, '2', 'Rachael Baumann'),
-(2, '2', 'John Falconer'),
-(3, '3', 'Neil Hendren');
+INSERT INTO BuyerInformation VALUES
+(1, '2', 'Rachael Baumann', 2),
+(2, '2', 'John Falconer', 2),
+(3, '3', 'Neil Hendren', 3);
+
+-- create the TextBook Buyer table
+CREATE TABLE INVOICE (
+  ID           INT            PRIMARY KEY     AUTO_INCREMENT,
+  Textbook	   VARCHAR(100)	  NOT NULL,
+  OrderNumber  VARCHAR(50)    NOT NULL,
+  ProductID		INT 		  NOT NULL,	
+  Foreign Key (ProductID) references Product (ID)
+);
+
+-- insert some rows into the Buyer table
+INSERT INTO INVOICE VALUES
+(1, 'Fluid Dynamics', '123', 1),
+(2, 'Termodynamics', '456', 2),
+(3, 'Fluid Dynamics', '789', 1);
 
 -- create a user and grant privileges to that user
 -- GRANT SELECT, INSERT, DELETE, UPDATE
