@@ -118,7 +118,7 @@ CREATE TABLE purchaserequestlineitem (
 );
 
 
--- make user.Email unique
+-- make user Email unique
 ALTER TABLE user
 ADD UNIQUE (Email);
 
