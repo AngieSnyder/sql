@@ -35,7 +35,5 @@ INSERT INTO Transactions VALUES
 (4, '248.00', 'Deposit', '1');
 
 -- create a user and grant privileges to that user
-GRANT SELECT, INSERT, DELETE, UPDATE
-ON bank_db.*
-TO bank_db_user@localhost
-IDENTIFIED BY 'sesame';
+CREATE USER prs_user@localhost IDENTIFIED BY 'sesame';
+GRANT SELECT, INSERT, DELETE, UPDATE ON prs.* TO prs_user@localhost;
