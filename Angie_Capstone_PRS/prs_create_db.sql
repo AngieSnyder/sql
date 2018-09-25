@@ -1,4 +1,5 @@
 -- create and select the database
+DROP USER IF EXISTS prs_user@localhost ;
 DROP DATABASE IF EXISTS prs;
 CREATE DATABASE prs;
 USE prs;
