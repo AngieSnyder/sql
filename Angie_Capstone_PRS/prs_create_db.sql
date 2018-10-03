@@ -56,7 +56,7 @@ VALUES
 -- create the Purchase Request table
 CREATE TABLE purchaserequest (
   ID					INT			PRIMARY KEY  AUTO_INCREMENT,
-  UserID      			INT 			   													NOT NULL     UNIQUE,
+  UserID      			INT,
   Description			VARCHAR(100)														NOT NULL,
   Justification			VARCHAR(255)														NOT NULL,
   DateNeeded			DATE 																NOT NULL,
@@ -106,7 +106,7 @@ INSERT INTO `product` (`ID`,`VendorID`,`PartNumber`,`Name`,`Price`,`Unit`,`Photo
 -- create the Purchase request LineItem table
 CREATE TABLE purchaserequestlineitem (
   ID					INT			PRIMARY KEY  AUTO_INCREMENT,
-  PurchaseRequestID		INT																	NOT NULL,
+  PurchaseRequestID		INT,
   ProductID				INT																	NOT NULL,
   Quantity				INT																	NOT NULL,
   IsActive				TinyInt(1) 	default 1												NOT NULL,

@@ -5,7 +5,7 @@ USE tv_shows;
 
 -- create TvShow table
 CREATE TABLE TvShow (
-  ID					INT					PRIMARY KEY  AUTO_INCREMENT,
+  ID					int					PRIMARY KEY  AUTO_INCREMENT,
   Name      			VARCHAR(100)		NOT NULL	UNIQUE,
   Rating				VARCHAR(5)			NOT NULL,
   Length				int					NOT NULL,
